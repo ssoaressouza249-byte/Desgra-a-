@@ -25,7 +25,7 @@ jobs:
             fi
             rm -rf tmp "$ZIP"
           fi
-          sed -i 's/libs\.androidx\.ui/libs.androidx.compose.ui/g; s/libs\.androidx\.material3/libs.androidx.compose.material3/g' app/build.gradle.kts
+          sed -i 's/libs\.androidx\.ui/libs.androidx.compose.ui/g; s/libs\.androidx\.material3/libs.androidx.compose.material3/g; s/aidl = true/aidl = true\n        buildConfig = true/g' app/build.gradle.kts
 
       - uses: actions/setup-java@v4
         with:
